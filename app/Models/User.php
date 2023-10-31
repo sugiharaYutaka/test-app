@@ -12,8 +12,9 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $table = 'user';
     /**
-     * The attributes that are mass assignable.
+     * 更新できるカラムを定義
      *
      * @var array<int, string>
      */
@@ -34,7 +35,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast.
+     * カラムの型の定義
      *
      * @var array<string, string>
      */
